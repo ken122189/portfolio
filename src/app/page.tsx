@@ -45,7 +45,7 @@ function AboutSection() {
           <br /><br />
           We are a family of 7, and I'm the <span className="font-semibold">second child</span>.
           <br /><br />
-          I enjoy reading, listening to music, running, and creating digital art. I also like scrolling on my phone,
+          I enjoy playing online games, cooking, and relaxing. In my free time, I like scrolling on my phone,
           watching tutorials, and learning new things through fun content online.
         </p>
       </div>
@@ -76,13 +76,13 @@ function EducationSection() {
   );
 }
 
-// Hobbies Section
+// Hobbies Section - Updated
 function HobbiesSection() {
   const hobbies = [
-    { icon: "📚", title: "Reading", desc: "Reading helps me gain knowledge and stay inspired." },
-    { icon: "🎵", title: "Listening to Music", desc: "Music relaxes my mind and motivates me daily." },
-    { icon: "🏃‍♂️", title: "Running", desc: "Running keeps me active and focused." },
-    { icon: "🎨", title: "Digital Art", desc: "Creating art improves my creativity and skills." },
+    { icon: "📚", title: "Reading", desc: "I enjoy reading tech articles, novels, and anything inspiring." },
+    { icon: "🎵", title: "Listening to Music", desc: "Relaxing with music and discovering new songs daily." },
+    { icon: "🏃‍♂️", title: "Running", desc: "I like to stay active and go for morning runs." },
+    { icon: "🎨", title: "Digital Art", desc: "Experimenting with digital drawing and creative designs." },
   ];
 
   return (
@@ -105,6 +105,7 @@ function HobbiesSection() {
     </section>
   );
 }
+
 
 // Contact Section
 function ContactSection() {
