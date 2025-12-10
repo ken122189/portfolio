@@ -1,65 +1,166 @@
+"use client";
+
+import { useRef } from "react";
 import Image from "next/image";
 
-export default function Home() {
+// Home Section
+function HomeSection() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <section className="relative min-h-screen w-full bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300 flex flex-col items-center justify-center px-6 py-20">
+      <div className="absolute top-20 md:top-28 flex justify-center w-full">
+        <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-8 border-white shadow-xl">
+          <Image
+            src="/images/brojan.jpg"
+            alt="Ken Weljane Brojan"
+            width={288}
+            height={288}
+            className="object-cover w-full h-full"
+            priority
+          />
+        </div>
+      </div>
+      <div className="mt-80 text-center">
+        <h1 className="text-6xl font-extrabold drop-shadow-lg mb-4 text-pink-700">
+          Ken Weljane Brojan
+        </h1>
+        <p className="text-xl mb-2 text-pink-600">Welcome to my personal website ✨</p>
+        <p className="text-md max-w-xl mx-auto text-pink-700/80">
+          Explore my sections below to know more about me.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// About Section
+function AboutSection() {
+  return (
+    <section className="min-h-screen w-full flex justify-center items-center px-8 py-20">
+      <div className="max-w-3xl w-full text-center bg-pink-100/60 p-8 rounded-2xl shadow-xl">
+        <h1 className="text-5xl font-extrabold mb-8 text-pink-700">About Me</h1>
+        <p className="text-lg leading-relaxed text-pink-900">
+          Hi! I'm <span className="font-semibold">Ken Weljane Brojan</span>,
+          a 19-year-old BSIT student from Naga College Foundation. I was born and raised in
+          <span className="font-semibold"> Camarines Sur</span>.
+          <br /><br />
+          We are a family of 7, and I'm the <span className="font-semibold">second child</span>.
+          <br /><br />
+          I enjoy reading, listening to music, running, and creating digital art. I also like scrolling on my phone,
+          watching tutorials, and learning new things through fun content online.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// Education Section
+function EducationSection() {
+  return (
+    <section className="min-h-screen w-full flex justify-center items-center px-8 py-20">
+      <div className="max-w-4xl w-full text-center">
+        <h1 className="text-5xl font-extrabold mb-10 text-pink-700">Education</h1>
+        <div className="bg-pink-100/60 p-10 rounded-2xl shadow-xl">
+          <h2 className="text-3xl font-bold mb-4 text-pink-700">Naga College Foundation</h2>
+          <p className="text-xl mb-4 text-pink-800">Bachelor of Science in Information Technology - 2nd Year</p>
+          <p className="text-lg leading-relaxed text-pink-900/90 mb-4">
+            Currently a 2nd-year BSIT student. I enjoy programming, web development, and exploring technology.
           </p>
+          <div className="text-left text-pink-900 space-y-2">
+            <p><b>Senior High:</b> Genesis Colleges Incorporated</p>
+            <p><b>High School:</b> Ocampo National High School</p>
+            <p><b>Elementary:</b> Ocampo Central School</p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+    </section>
+  );
+}
+
+// Hobbies Section
+function HobbiesSection() {
+  const hobbies = [
+    { icon: "📚", title: "Reading", desc: "Reading helps me gain knowledge and stay inspired." },
+    { icon: "🎵", title: "Listening to Music", desc: "Music relaxes my mind and motivates me daily." },
+    { icon: "🏃‍♂️", title: "Running", desc: "Running keeps me active and focused." },
+    { icon: "🎨", title: "Digital Art", desc: "Creating art improves my creativity and skills." },
+  ];
+
+  return (
+    <section className="min-h-screen w-full flex justify-center items-center px-8 py-20">
+      <div className="max-w-4xl w-full text-center">
+        <h1 className="text-5xl font-extrabold mb-10 text-pink-700">My Hobbies</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {hobbies.map((item, i) => (
+            <div
+              key={i}
+              className="bg-pink-100/60 p-6 rounded-2xl shadow-lg hover:bg-pink-200 transition"
+            >
+              <div className="text-4xl">{item.icon}</div>
+              <h2 className="text-2xl font-bold mt-2 text-pink-700">{item.title}</h2>
+              <p className="text-pink-900 mt-2">{item.desc}</p>
+            </div>
+          ))}
         </div>
-      </main>
+      </div>
+    </section>
+  );
+}
+
+// Contact Section
+function ContactSection() {
+  return (
+    <section className="min-h-screen w-full flex justify-center items-center px-8 py-20">
+      <div className="max-w-3xl w-full text-center bg-pink-100/60 p-10 rounded-2xl shadow-xl">
+        <h1 className="text-5xl font-extrabold mb-8 text-pink-700">Contact</h1>
+        <p className="text-xl text-pink-900 mb-4"><b>Email:</b> kenbrojan@email.com</p>
+        <p className="text-xl text-pink-900 mb-4"><b>Phone:</b> 09123456789</p>
+        <p className="text-xl text-pink-900 mb-2">
+          <b>Instagram:</b> <a className="underline text-pink-700" href="#">@kenbrojan</a>
+        </p>
+        <p className="text-xl text-pink-900">
+          <b>Facebook:</b> <a className="underline text-pink-700" href="#">Ken Brojan</a>
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// Main Page
+export default function Page() {
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const educationRef = useRef<HTMLDivElement>(null);
+  const hobbiesRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSection = (ref?: any) => {
+    if (!ref) window.scrollTo({ top: 0, behavior: "smooth" });
+    else ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <div className="scroll-smooth font-[Poppins] text-pink-900 bg-pink-50">
+      {/* NAV BUTTONS */}
+      <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex gap-4 bg-pink-200/90 p-3 rounded-full shadow-lg backdrop-blur-md">
+        {["Home", "About", "Education", "Hobbies", "Contact"].map((label, i) => {
+          const refs = [undefined, aboutRef, educationRef, hobbiesRef, contactRef];
+          return (
+            <button
+              key={i}
+              onClick={() => scrollToSection(refs[i])}
+              className="px-4 py-2 rounded-full bg-pink-400 text-white hover:bg-pink-500 transition"
+            >
+              {label}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Sections */}
+      <HomeSection />
+      <div ref={aboutRef}><AboutSection /></div>
+      <div ref={educationRef}><EducationSection /></div>
+      <div ref={hobbiesRef}><HobbiesSection /></div>
+      <div ref={contactRef}><ContactSection /></div>
     </div>
   );
 }
